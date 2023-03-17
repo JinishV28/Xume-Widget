@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XUME | Widget</title>
+  <link rel="shortcut icon" href="./assets/logo2.png">
+  <link rel="stylesheet" href="./assets/css/widget.css">
+  <!--Bootstrap-->
+  <link
+    href='https://fonts.googleapis.com/css?family=Montserrat:400,100,100italic,300,400italic,500,500italic,700,700italic,900italic,900'
+    rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <path fill-rule="evenodd"
+    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+  <!-- Fonts -->
+  <link rel="preload"
+    href="https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/fonts/futura-pt-book.2dadbb3c03c1.woff2"
+    as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload"
+    href="https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/fonts/futura-pt-book-oblique.f859db99cda9.woff2"
+    as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload"
+    href="https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/fonts/futura-pt-medium.b650e9c2aaf6.woff2"
+    as="font" type="font/woff2" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <section class="large-screen">
+    <div id="widgetModal" class="modal fade" data-backdrop="false" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-2 ml-auto">
+                <button type="button" class="close" id="crossButton1" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+            </div>
+            <section class="section-1">
+              <div class="row mb-4">
+                <div class="col-12">
+                  <div class="row justify-content-center">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="categories-btn btn" onclick="categoryFunction()">Category</button>
+                      <button type="button" class="product-btn btn" onclick="productFunction()">Product</button>
+                    </div>
+                  </div>
+                </div>
+                <br><br>
+                <div class="offset-2 col-md-8">
+                  <input id="searchBar" type="text" placeholder="Search.."><button class="searchButton" type="submit"><i
+                      class="fa fa-search" onclick="dropDownListFunction()"></i></button>
+                  <div id="dropdown" class="dropdown">
+                    <a onclick="dropDownFunction()">Wheyfer</a>
+                  </div>
+                </div>
+                <div class="offset-1 col-1">
+                  <img src="./Bigbasket/5.png" height="30px" alt="">
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-5" style="padding: 0%;">
+                  <img src="./Bigbasket/left-line.png" height="30px" alt="">
+                </div>
+              </div>
+  
+              <div class="text-view row row-content justify-content-center">
+                <div class="col-3">
+                  <img src="./assets/XUME-LOGO.png" width="100%" alt="">
+                </div>
+                <div class="col-12">
+                  <div class="row justify-content-center">
+                    <div class="col-12">
+                      <div class="widget-title mb-3">
+                        New-age consuming starts <br> with one search
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <div class="widget-subtitle">
+                        No more falling prey to marketing gimmicks. Know what's in the <br> package before you buy it with
+                        the Xume app.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="category-view d-none">
+                <div class="row justify-content-center mt-3" style="background-image: linear-gradient(90deg,#20172b, rgb(21, 15, 28), black); padding: 5%;">
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row mt-4">
+                <div class="col-2 offset-5">
+                  <img height="30px" src="./Bigbasket/4.png" alt="">
+                </div>
+                <div class="col-5 ml-auto" style="padding: 0; text-align: right;">
+                  <img src="./Bigbasket/right-line.png" height="34.35px" alt="">
+                </div>
+              </div>
+  
+            </section>
+  
+            <section class="section-2 d-none">
+              <div class="row">
+                <div class="offset-6 col-1">
+                  <img src="./Bigbasket/5.png" height="30px" alt="">
+                </div>
+                <div class="col-3 ml-auto mb-3 back-btn">
+                  <button type="button" class="btn" style="text-decoration: none; color: #f2c21e;" onclick="backToSearchFunction()">Back To Search</button>
+                </div>
+              </div>
+  
+              <div class="row mb-3">
+                <div class="col-5">
+                  <img src="./Bigbasket/left-line.png" height="30px" alt="">
+                </div>
+              </div>
+  
+              <div id="productMainView" class="row justify-content-center">
+                <div class="col-10"
+                  style="background-color: rgb(255, 51, 0); color: white; border-radius: 25px; padding: 1.5%;">
+                  <div class="row">
+                    <div class="offset-1 col-3" style="background-color: rgb(65, 65, 65); padding: 1%; text-align: center; color: red;">
+                      <img src="./Bigbasket/Score-Without-BG.png" height="150px" alt="">
+                    </div>
+                    <div class="ml-5 col-6 mt-3">
+                      <h4 style="font-weight: bolder;">Ondago Wheyfer coffee<br>Flavor Protein Bar</h4>
+                      <div class="product-action-btns row mt-4">
+                        <div class="col-5" style="padding-right: 1.5%;">
+                          <button class="btn view-btn" onclick="window.location.href='../widget.html#betterMatches'">Better Matches</button>
+                        </div>
+                        <div class="col-5" style="padding-left: 1.5%;">
+                          <button class="btn buy-btn">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="./Bigbasket/2.png" alt="Your Image" style="position: absolute;
+                                bottom: -85px;
+                                right: 20px;
+                                z-index: 1;
+                                width: 120px;
+                                height: 250px;">
+                </div>
+              </div>
+  
+              <div class="row justify-content-center mt-5">
+                <div class="btn-group mx-auto" role="group">
+                  <button type="button" class="quick-facts-btn btn" onclick="quickfactFuncion()">Quick Facts</button>
+                  <button type="button" class="ingredient-analysis-btn btn" onclick="ingredientFuncion()">Ingredient Analysis</button>
+                </div>
+              </div>
+  
+              <div class="ingredient-analysis d-none">
+                <div class="row mt-5 text-center">
+                  <div class="col-4">
+                    <canvas id="chart1"></canvas>
+                    <h6 class="mt-3">Allergens(2)</h6>
+                  </div>
+                  <div class="col-4">
+                    <canvas id="chart2"></canvas>
+                    <h6 class="mt-3">Concerns(2)</h6>
+                  </div>
+                  <div class="col-4">
+                    <canvas id="chart3"></canvas>
+                    <h6 class="mt-3">Additives(2)</h6>
+                  </div>
+                </div>
+                <div class="row mt-5 text-center">
+                  <div class="col-4">
+                    <canvas id="chart4"></canvas>
+                    <h6 class="mt-3">Sugar & Sustitutes(3)</h6>
+                  </div>
+                  <div class="col-4">
+                    <canvas id="chart5"></canvas>
+                    <h6 class="mt-3">Refines Grains(1)</h6>
+                  </div>
+                  <div class="col-4">
+                    <canvas id="chart6"></canvas>
+                    <h6 class="mt-3">Additives(5)</h6>
+                  </div>
+                </div>
+              </div>
+  
+  
+              <div class="quick-facts">
+                <div class="row justify-content-center mt-5" style="font-weight: bold;">
+                  <div class="col-2">
+                    <ul id="quick-facts-pos">
+                      <li><span style="color: white;">Whole Grains</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-2">
+                    <ul id="quick-facts-neg">
+                      <li><span style="color: white;">Added Sodium</span></li>
+                      <li><span style="color: white;">Peservative</span></li>
+                      <li><span style="color: white;">Refined Oil</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div id="betterMatches" class="better-matches mt-3" style="background-image: linear-gradient(90deg,#20172b, rgb(21, 15, 28), black); padding: 5%;">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <h4 style="color: white;">BETTER MATCHES</h4>
+                  </div>
+                </div>
+    
+                <div class="row justify-content-center mt-5">
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="window.location.href='../widget.html#productMainView'">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row mt-5">
+                <div class="col-1 offset-1">
+                  <img height="30px" src="./Bigbasket/4.png" alt="">
+                </div>
+                <div class="col-12">
+                  <div class="text-center">
+                    <h3 style="color: #f2c21e;">Download XUME App to know more</h3>
+                    <a href=" https://apps.apple.com/in/app/xume/id1279728797"><i
+                          class="download-opts fa fa-apple"></i></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.planmyfood.app"><i
+                          class="download-opts fa fa-android"></i></a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-5 ml-auto" style="padding: 0; text-align: right;">
+                  <img src="./Bigbasket/right-line.png" height="34.35px" alt="">
+                </div>
+              </div>
+            </section>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+    <button class="btn btn-sm btn-warning" id="widgetBtn" data-toggle="modal" data-target="#widgetModal"><img
+        src="./assets/logo2.png" height="30px" alt=""> <strong>CONXUME</strong>
+    </button>
+  </section>
+
+  <section class="small-screen">
+    <div id="widgetModalMb" class="modal fade" data-backdrop="false" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-2 ml-auto">
+                <button type="button" class="close" id="crossButton1" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+            </div>
+            <section class="section-1">
+              <div class="row justify-content-center mb-3">
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <div class="btn-group" role="group">
+                      <button type="button" onclick="categoryFunction()" class="categories-btn btn">Category</button>
+                      <button type="button" onclick="productFunction()" class="product-btn btn">Product</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row justify-content-center mb-2">
+                <div class="col-12 col-sm-10 col-md-8">
+                  <input id="searchBar" type="text" placeholder="Search.."><button class="searchButton" type="submit"><i
+                      class="fa fa-search"></i></button>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-5" style="padding: 0%;">
+                  <img class="left-line" src="./Bigbasket/left-line.png" alt="">
+                </div>
+                <div class="offset-4 offset-md-none col-1">
+                  <img class="blue-star" src="./Bigbasket/5.png" alt="">
+                </div>
+              </div>
+  
+              <div class="text-view row row-content justify-content-center">
+                <div class="col-4 col-md-3">
+                  <img class="xume-logo" src="./assets/XUME-LOGO.png" alt="">
+                </div>
+                <div class="col-12">
+                  <div class="row justify-content-center">
+                    <div class="col-12">
+                      <div class="widget-title mb-3">
+                        New-age consuming starts <br> with one search
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <div class="widget-subtitle">
+                        No more falling prey to marketing gimmicks. Know what's in the <br> package before you buy it with
+                        the Xume app.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="category-view d-none mt-3">
+                <div class="row justify-content-center" style="background-image: linear-gradient(90deg,#20172b, rgb(21, 15, 28), black); padding: 5%;">
+                  <div class="col-6 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-6 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-6 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-6 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-6 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row mt-4">
+                <div class="col-2 offset-1">
+                  <img class="yellow-star" src="./Bigbasket/4.png" alt="">
+                </div>
+                <div class="col-5 ml-auto" style="padding: 0; text-align: right;">
+                  <img class="right-line" src="./Bigbasket/right-line.png" alt="">
+                </div>
+              </div>
+  
+            </section>
+  
+            <section class="section-2 d-none">
+              <div class="row">
+                <div class="col-5 col-sm-4 col-md-3 ml-auto mb-3 back-btn">
+                  <button type="button" class="btn" style="text-decoration: none; color: #f2c21e;" onclick="backToSearchFunction()">Back To Search</button>
+                </div>
+              </div>
+  
+              <div class="row mb-3">
+                <div class="col-5">
+                  <img class="left-line" src="./Bigbasket/left-line.png" alt="">
+                </div>
+                <div class="offset-5 col-1">
+                  <img class="blue-star" src="./Bigbasket/5.png" alt="">
+                </div>
+              </div>
+              
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-9 orange-box">
+                  <div class="row justify-content-center mt-1">
+                    <div class="col-10 mt-3">
+                      <h4 style="font-weight: bolder;">Ondago Wheyfer coffee Flavor Protein Bar</h4>
+                    </div>
+                  </div>
+
+                  <div class="row justify-content-center mt-3">
+                    <div class="col-4" style="display: flex; align-items: center;">
+                      <div class="row">
+                        <div class="col-12 square">
+                          <img src="./Bigbasket/Score-Without-BG.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-5">
+                      <img class="product-img" src="./Bigbasket/2.png" alt="Your Image">
+                    </div>
+                  </div>
+
+                  <div class="product-action-btns row justify-content-center mt-4 mb-4"> 
+                    <div class="col-10">
+                      <button class="btn better-matches-btn" onclick="window.location.href='./widget.html#betterMatches2'">Better Matches</button>
+                      <button class="btn buy-btn">Buy</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row justify-content-center mt-5">
+                <div class="btn-group mx-auto" role="group">
+                  <button type="button" class="quick-facts-btn btn" onclick="quickfactFuncion()">Quick Facts</button>
+                  <button type="button" class="ingredient-analysis-btn btn" onclick="ingredientFuncion()">Ingredient Analysis</button>
+                </div>
+              </div>
+  
+              <div class="ingredient-analysis d-none">
+                <div class="row mt-5 text-center justify-content-center">
+                  <div class="col-6 col-md-5 col-lg-4">
+                    <canvas id="chart7"></canvas>
+                    <h6 class="mt-3">Allergens(2)</h6>
+                  </div>
+                  <div class="col-6 col-md-5 col-lg-4">
+                    <canvas id="chart8"></canvas>
+                    <h6 class="mt-3">Concerns(8)</h6>
+                  </div>
+                  <div class="col-6 col-md-5 col-lg-4">
+                    <canvas id="chart9"></canvas>
+                    <h6 class="mt-3">Additives(5)</h6>
+                  </div>
+                  <div class="col-6 col-md-5 col-lg-4">
+                    <canvas id="chart10"></canvas>
+                    <h6 class="mt-3">Sugar & Sustitutes(3)</h4>
+                  </div>
+                  <div class="col-6 col-md-5 col-lg-4">
+                    <canvas id="chart11"></canvas>
+                    <h6 class="mt-3">Refines Grain & Oils(1)</h6>
+                  </div>
+                  <div class="col-6 col-md-5 col-lg-4">
+                    <canvas id="chart12"></canvas>
+                    <h6 class="mt-3">Additives(5)</h6>
+                  </div>
+                </div>
+              </div>
+  
+  
+              <div class="quick-facts">
+                <div class="row justify-content-center mt-5" style="font-weight: bold;">
+                  <div class="col-5 col-sm-4 col-md-3">
+                    <ul id="quick-facts-pos">
+                      <li><span style="color: white;">Whole Grains</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-5 col-sm-4 col-md-3">
+                    <ul id="quick-facts-neg">
+                      <li><span style="color: white;">Added Sodium</span></li>
+                      <li><span style="color: white;">Peservative</span></li>
+                      <li><span style="color: white;">Refined Oil</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+  
+              <div id="betterMatches2" class="better-matches mt-3">
+                <div class="row justify-content-center rounded" style="background-image: linear-gradient(90deg,#20172b, rgb(21, 15, 28), black); padding: 5%;">
+                  <div class="col-12 mt-3 text-center">
+                    <h4 style="color: white;">BETTER MATCHES</h4>
+                  </div>
+
+                  <div class="col-6 col-sm-5 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-6 col-sm-5 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-6 col-sm-5 col-md-4 col-lg-3 mt-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="90%" width="90%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="col-12">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+  
+              <div class="row mt-5">
+                <div class="col-12">
+                  <div class="download-text text-center">
+                    <h6 style="color: #f2c21e;">Download XUME App to know more</h6>
+                    <a href=" https://apps.apple.com/in/app/xume/id1279728797"><i
+                          class="download-opts fa fa-apple"></i></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.planmyfood.app"><i
+                          class="download-opts fa fa-android"></i></a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row mt-4">
+                <div class="col-2 offset-1">
+                  <img class="yellow-star" src="./Bigbasket/4.png" alt="">
+                </div>
+                <div class="col-5 ml-auto" style="padding: 0; text-align: right;">
+                  <img class="right-line" src="./Bigbasket/right-line.png" alt="">
+                </div>
+              </div>
+            </section>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+    <button class="btn btn-sm btn-warning" id="widgetBtn" data-toggle="modal" data-target="#widgetModalMb"><img
+        src="./assets/logo2.png" height="30px" alt=""> <strong>CONXUME</strong>
+    </button>
+  </section>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script>
+  const ctx = document.getElementById("chart1").getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [20, 80],
+        backgroundColor: ["#9afcce", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+    
+  });
+
+  const ctx2 = document.getElementById("chart2").getContext('2d');
+  const myChart2 = new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [20, 80],
+        backgroundColor: ["#870000", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+    
+  });
+
+  const ctx3 = document.getElementById("chart3").getContext('2d');
+  const myChart3 = new Chart(ctx3, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [50, 50],
+        backgroundColor: ["#ff9797", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+  });
+
+  const ctx4 = document.getElementById("chart4").getContext('2d');
+  const myChart4 = new Chart(ctx4, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [40, 60],
+        backgroundColor: ["#F9EDA7", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+    
+  });
+
+  const ctx5 = document.getElementById("chart5").getContext('2d');
+  const myChart5 = new Chart(ctx5, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [20, 80],
+        backgroundColor: ["#E8C0A6", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+  });
+
+  const ctx6 = document.getElementById("chart6").getContext('2d');
+  const myChart6 = new Chart(ctx6, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [50, 50],
+        backgroundColor: ["#ff9797", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+  });
+
+  const ctx7 = document.getElementById("chart7").getContext('2d');
+  const myChart7 = new Chart(ctx7, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [20, 80],
+        backgroundColor: ["#9afcce", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+    
+  });
+
+  const ctx8 = document.getElementById("chart8").getContext('2d');
+  const myChart8 = new Chart(ctx8, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [80, 20],
+        backgroundColor: ["#870000", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+  });
+
+  const ctx9 = document.getElementById("chart9").getContext('2d');
+  const myChart9 = new Chart(ctx9, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [50, 50],
+        backgroundColor: ["#ff9797", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+  });
+
+  const ctx10 = document.getElementById("chart10").getContext('2d');
+  const myChart10 = new Chart(ctx10, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [40, 60],
+        backgroundColor: ["#F9EDA7", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+    
+  });
+
+  const ctx11 = document.getElementById("chart11").getContext('2d');
+  const myChart11 = new Chart(ctx11, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [20, 80],
+        backgroundColor: ["#E8C0A6", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+  });
+
+  const ctx12 = document.getElementById("chart12").getContext('2d');
+  const myChart12 = new Chart(ctx12, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        label: 'food Items',
+        data: [50, 50],
+        backgroundColor: ["#ff9797", "#d5d5d5"],
+        borderWidth: [0,0],
+        padding:[0,0]
+      }]
+    },
+  });
+</script>
+<script>
+  $(".categories-btn").css("background-color","#109a73");
+  $(".categories-btn").css("font-weight","500");
+  $(".quick-facts-btn").css("background-color","#109a73");
+  $(".quick-facts-btn").css("font-weight","500");
+
+  function productFunction(){
+    $(".product-btn").css("background-color","#109a73");
+    $(".product-btn").css("font-weight","500");
+    $(".categories-btn").css("background-color","transparent");
+    $(".categories-btn").css("font-weight","100");
+    $('.category-view').addClass("d-none");
+    $('.text-view').removeClass("d-none");
+  }
+  
+  function categoryFunction(){
+    $(".categories-btn").css("background-color","#109a73");
+    $(".categories-btn").css("font-weight","500");
+    $(".product-btn").css("background-color","transparent");
+    $(".product-btn").css("font-weight","100");
+  }
+
+  function ingredientFuncion(){
+    $(".ingredient-analysis-btn").css("background-color","#109a73");
+    $(".ingredient-analysis-btn").css("font-weight","500");
+    $(".quick-facts-btn").css("background-color","transparent");
+    $(".quick-facts-btn").css("font-weight","100");
+    $('.quick-facts').addClass("d-none");
+    $('.ingredient-analysis').removeClass("d-none");
+  }
+
+  function quickfactFuncion(){
+    $(".quick-facts-btn").css("background-color","#109a73");
+    $(".quick-facts-btn").css("font-weight","500");
+    $(".ingredient-analysis-btn").css("background-color","transparent");
+    $(".ingredient-analysis-btn").css("font-weight","100");
+    $('.ingredient-analysis').addClass("d-none");
+    $('.quick-facts').removeClass("d-none");
+  }
+
+  function productViewFunction(){
+    $('.section-1').addClass("d-none");
+    $('.section-2').removeClass("d-none");
+  }
+
+  function backToSearchFunction(){
+    $('.section-2').addClass("d-none");
+    $('.section-1').removeClass("d-none");
+  }
+
+  function dropDownListFunction(){
+    $('.dropdown').removeClass("d-none");
+  }
+
+  function dropDownFunction(){
+    $('.text-view').addClass("d-none");
+    $('.category-view').removeClass("d-none");
+  }
+
+  // (document).ready(function() {
+  
+  // });
+</script>
+
+
+</html>
