@@ -68,9 +68,15 @@
                 <br><br>
                 <div class="offset-2 col-md-8">
                   <input id="searchBar" type="text" placeholder="Search.."><button class="searchButton" type="submit"><i
-                      class="fa fa-search" onclick="dropDownListFunction()"></i></button>
-                  <div id="dropdown" class="dropdown">
-                    <a onclick="dropDownFunction()">Wheyfer</a>
+                      class="fa fa-search"></i></button>
+                  <div class="row justify-content-center">
+                    <div class="col-11">
+                      <div id="dropdown" class="dropdown d-none">
+                        <a>Protein Bars</a>
+                        <a>Milk</a>
+                        <a>Biscuit</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="offset-1 col-1">
@@ -106,8 +112,8 @@
                 </div>
               </div>
   
-              <div class="category-view d-none">
-                <div class="row justify-content-center mt-3" style="background-image: linear-gradient(90deg,#20172b, rgb(21, 15, 28), black); padding: 5%;">
+              <div class="category-view d-none" style="background-image: linear-gradient(90deg,#20172b, rgb(21, 15, 28), black); padding: 5%;">
+                <div class="row justify-content-center">
                   <div class="col-3">
                     <div class="card" style="background-color: #222c35; border-radius: 25px;">
                       <div class="card-body">
@@ -183,6 +189,105 @@
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row justify-content-center mt-3">
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-3">
+                    <div class="card" style="background-color: #222c35; border-radius: 25px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-5">
+                            <img src="./Bigbasket/3.png" height="90%" width="90%" alt="">
+                          </div>
+                          <div class="col-7 mt-2"  style="padding: 0%;">
+                            <img src="./Bigbasket/61.png" height="85%" width="85%" alt="">
+                          </div>
+                        </div>
+                        <div class="col-12 mt-2" style="padding: 0%;">
+                          <p style="color:white; font-size: medium; font-weight: bold;">Hyp - Lean Sugarfree Protein Bars</p>
+                        </div>
+                        <div class="product-action-btns2 row mt-4 justify-content-center">
+                          <div class="view-col col-6">
+                            <button class="btn view-btn" onclick="productViewFunction()">View</button>
+                          </div>
+                          <div class="buy-col col-6">
+                            <button class="btn buy-btn">Buy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="score mt-5">
+                  <div class="row">
+                    <div class="col-12" style="color: white; text-align: center;">
+                      <h4>What The Score Suggests</h4>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center mt-3" style="text-align: center; font-weight: bold;">
+                    <div class="col-3" style="color: #109a73;">
+                      Yesss! Go For It
+                    </div>
+                    <div class="col-3" style="color: #f2c21e">
+                      Mehhh! You Can Do Better
+                    </div>
+                    <div class="col-3" style="color: #e24227;">
+                      Naaah! It's A No Go
                     </div>
                   </div>
                 </div>
@@ -444,8 +549,17 @@
 
               <div class="row justify-content-center mb-2">
                 <div class="col-12 col-sm-10 col-md-8">
-                  <input id="searchBar" type="text" placeholder="Search.."><button class="searchButton" type="submit"><i
+                  <input id="searchBar2" type="text" placeholder="Search.."><button class="searchButton" type="submit"><i
                       class="fa fa-search"></i></button>
+                  <div class="row justify-content-center">
+                    <div class="col-11">
+                      <div id="dropdown2" class="dropdown d-none">
+                        <a>Protein Bars</a>
+                        <a>Milk</a>
+                        <a>Biscuit</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
@@ -623,6 +737,25 @@
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="score mt-5">
+                  <div class="row">
+                    <div class="col-12" style="color: white; text-align: center;">
+                      <h4>What The Score Suggests</h4>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center mt-3" style="text-align: center; font-weight: bold;">
+                    <div class="col-4" style="color: #109a73;">
+                      Yesss! Go For It
+                    </div>
+                    <div class="col-4" style="color: #f2c21e">
+                      Mehhh! You Can Do Better
+                    </div>
+                    <div class="col-4" style="color: #e24227;">
+                      Naaah! It's A No Go
                     </div>
                   </div>
                 </div>
@@ -1033,13 +1166,75 @@
   $(".quick-facts-btn").css("background-color","#109a73");
   $(".quick-facts-btn").css("font-weight","500");
 
+  $(document).ready( function(e)
+  {
+    var search = document.getElementById("searchBar");
+    var dropdown = document.getElementById("dropdown")
+    search.addEventListener("focus", function(e)
+    {
+      dropdown.classList.remove("d-none");
+      search.addEventListener("keyup", function (e) 
+      {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("searchBar");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("dropdown");
+        a = div.getElementsByTagName("a");
+        for (i = 0; i < a.length; i++) {
+          txtValue = a[i].textContent || a[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+          } else {
+            a[i].style.display = "none";
+          }
+        }
+      });
+    });
+
+    var search2 = document.getElementById("searchBar2");
+    var dropdown2 = document.getElementById("dropdown2")
+    search2.addEventListener("focus", function(e)
+    {
+      dropdown2.classList.remove("d-none");
+      search2.addEventListener("keyup", function (e) 
+      {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("searchBar2");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("dropdown2");
+        a = div.getElementsByTagName("a");
+        for (i = 0; i < a.length; i++) {
+          txtValue = a[i].textContent || a[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+          } else {
+            a[i].style.display = "none";
+          }
+        }
+      });
+    });
+
+    var opt = document.querySelector('#dropdown a');
+    opt.addEventListener("click", function(e)
+    {
+      let text = event.target.textContent
+      dropDownFunction(text);
+    });
+
+    var opt = document.querySelector('#dropdown2 a');
+    opt.addEventListener("click", function(e)
+    {
+      let text = event.target.textContent
+      dropDownFunction(text);
+    });
+  }
+  );
+
   function productFunction(){
     $(".product-btn").css("background-color","#109a73");
     $(".product-btn").css("font-weight","500");
     $(".categories-btn").css("background-color","transparent");
     $(".categories-btn").css("font-weight","100");
-    $('.category-view').addClass("d-none");
-    $('.text-view').removeClass("d-none");
   }
   
   function categoryFunction(){
@@ -1077,13 +1272,13 @@
     $('.section-1').removeClass("d-none");
   }
 
-  function dropDownListFunction(){
-    $('.dropdown').removeClass("d-none");
-  }
-
-  function dropDownFunction(){
+  function dropDownFunction(txt){
+    $('.dropdown').addClass("d-none");
     $('.text-view').addClass("d-none");
     $('.category-view').removeClass("d-none");
+    $("#searchBar").val(txt);
+    $("#searchBar2").val(txt);
+    // $("#searchBar").text(opt);
   }
 
   // (document).ready(function() {
